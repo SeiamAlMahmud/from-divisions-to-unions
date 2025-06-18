@@ -1675,7 +1675,7 @@ const districts_en = {
         },
         {
             "value": 501,
-            "title": "Mymansing city corporation"
+            "title": "Mymensingh city corporation"
         }
     ],
     "72": [
@@ -9858,7 +9858,7 @@ const districts_en = {
     "501": [
         {
             "value": 4651,
-            "title": "Mymansing sadar"
+            "title": "Mymensingh sadar"
         }
     ],
     "475": [
