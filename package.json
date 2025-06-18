@@ -1,6 +1,6 @@
 {
   "name": "from-divisions-to-unions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "this package is created for getting all divions , districts, upazilas, unions data",
   "main": "index.js",
   "scripts": {
