@@ -11,12 +11,12 @@
 
 
 you have to use this only for any node environment.
-Use this command in your terminal `npm install bd-divisions-to-unions`
+Use this command in your terminal `npm install from-divisions-to-unions`
 
 then you need call the specific function to use these.
 
 
-` import {getAllDivision, getAllDistrict, getAllUpazila, getAllUnion  } from'bd-divisions-to-unions'; `
+` import {getAllDivision, getAllDistrict, getAllUpazila, getAllUnion  } from'from-divisions-to-unions'; `
 ` console.log(getAllDivision())`
 
 To achieve all data you just call 4 functions
