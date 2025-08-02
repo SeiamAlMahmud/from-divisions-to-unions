@@ -3,9 +3,15 @@
   "version": "1.0.3",
   "description": "this package is created for getting all divions , districts, upazilas, unions data",
   "main": "index.js",
+  "types": "types/from-divisions-to-unions/index.d.ts", 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+    "files": [
+    "index.js",
+    "list-of-all-place",
+    "types"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SeiamAlMahmud/from-divisions-to-unions.git"
