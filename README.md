@@ -1,30 +1,112 @@
-# bd-divisons-to-unions
+# from-divisions-to-unions
 
-### Hello everyone I just created a npm package where you will find all data based on Bangladesh.
- - Divisions
- - Districts
- - Upazillas
- - Unions
+A lightweight npm package to get all **Divisions, Districts, Upazilas, and Unions** of Bangladesh — with support for both **Bangla** and **English** data.
 
-  ### Let's talk about how you will use it.
+## Installation
 
+```bash
+npm install from-divisions-to-unions
+```
 
+---
 
-you have to use this only for any node environment.
-Use this command in your terminal `npm install from-divisions-to-unions`
+## Usage
 
-then you need call the specific function to use these.
+### ES Module (React, Next.js, etc.)
 
+```js
+import {
+  getAllDivision,
+  getAllDistrict,
+  getAllUpazila,
+  getAllUnion,
+  getDistricts,
+  getUpazilas,
+  getUnions,
+} from 'from-divisions-to-unions';
+```
 
-` import {getAllDivision, getAllDistrict, getAllUpazila, getAllUnion  } from'from-divisions-to-unions'; `
-` console.log(getAllDivision())`
+### CommonJS (Express, Node.js, etc.)
 
-To achieve all data you just call 4 functions
+```js
+const {
+  getAllDivision,
+  getAllDistrict,
+  getAllUpazila,
+  getAllUnion,
+  getDistricts,
+  getUpazilas,
+  getUnions,
+} = require('from-divisions-to-unions');
+```
 
-- `getAllDivision()` if you pass the `en` parameter then you will get the english written divisions. `getAllDivisions("en")`
+---
 
-- `getAllDistrict()` if you pass the `en` parameter then you will get the english written Zilla. `getAllDistrict("en")`
-- `getAllUpazila()` if you pass the `en` parameter then you will get the english written upazila. `getAllUpazila("en")`
-- `getAllUnion()` if you pass the `en` parameter then you will get the english written union. `getAllUnion("en")`
+## Functions
 
+### Get All Data
 
+| Function | Description |
+|---|---|
+| `getAllDivision()` | Returns all divisions (Bangla by default) |
+| `getAllDistrict()` | Returns all districts |
+| `getAllUpazila()` | Returns all upazilas |
+| `getAllUnion()` | Returns all unions |
+
+Pass `"en"` as argument to get English data:
+
+```js
+getAllDivision()       // Bangla
+getAllDivision("en")   // English
+
+getAllDistrict("en")
+getAllUpazila("en")
+getAllUnion("en")
+```
+
+---
+
+### Get Filtered Data (by parent)
+
+| Function | Description |
+|---|---|
+| `getDistricts(division_value)` | Get districts under a specific division |
+| `getUpazilas(district_value)` | Get upazilas under a specific district |
+| `getUnions(upazila_value)` | Get unions under a specific upazila |
+
+```js
+const districts = getDistricts("dhaka");        // Bangla
+const districts = getDistricts("dhaka", "en");  // English
+
+const upazilas = getUpazilas("gazipur");
+const unions   = getUnions("kaliakair");
+```
+
+---
+
+## Example Response
+
+```js
+getAllDivision()
+// [
+//   { value: "dhaka", title: "ঢাকা" },
+//   { value: "chittagong", title: "চট্টগ্রাম" },
+//   ...
+// ]
+
+getAllDivision("en")
+// [
+//   { value: "dhaka", title: "Dhaka" },
+//   { value: "chittagong", title: "Chittagong" },
+//   ...
+// ]
+```
+
+---
+
+## Author
+
+**Seiam Al Mahmud**
+
+- GitHub: [SeiamAlMahmud](https://github.com/SeiamAlMahmud)
+- npm: [from-divisions-to-unions](https://www.npmjs.com/package/from-divisions-to-unions)
