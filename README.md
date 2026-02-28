@@ -89,15 +89,15 @@ const unions   = getUnions("kaliakair");
 ```js
 getAllDivision()
 // [
-//   { value: "dhaka", title: "ঢাকা" },
-//   { value: "chittagong", title: "চট্টগ্রাম" },
+//   { value: "10", title: "ঢাকা" },
+//   { value: "40", title: "চট্টগ্রাম" },
 //   ...
 // ]
 
 getAllDivision("en")
 // [
-//   { value: "dhaka", title: "Dhaka" },
-//   { value: "chittagong", title: "Chittagong" },
+//   { value: "10", title: "Dhaka" },
+//   { value: "40", title: "Chittagong" },
 //   ...
 // ]
 ```
